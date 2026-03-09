@@ -3,9 +3,13 @@
 import { motion } from "framer-motion";
 
 const events = [
-  { date: "Mar 5", label: "MIT Sloan Sports Analytics Hackathon" },
-  { date: "Mar 6–8", label: "MIT Media Lab Hard Mode Hackathon" },
-  { date: "Mar 13–15", label: "MIT Hacking Medicine: Grand Hack" },
+  { date: "Mar 13–15", label: "MIT Hacking Medicine: Grand Hack", href: null },
+  {
+    date: "May 7",
+    label: "Haymakers4Hope Charity Boxing Match",
+    href: "https://haymakersforhope.org/events/boxing/rock-n-rumble-xv-boston-2026/fighters/tucker-paron",
+  },
+  { date: "Jun 13", label: "M22 Run/Bike/Paddle Challenge", href: null },
 ];
 
 export default function NowSection() {
@@ -31,7 +35,7 @@ export default function NowSection() {
           What I&rsquo;m Thinking About
         </h2>
         <p className="font-mono text-xs mt-1" style={{ color: "var(--muted)" }}>
-          as of February 24, 2026
+          as of March 8, 2026
         </p>
       </motion.div>
 
@@ -53,10 +57,10 @@ export default function NowSection() {
             className="font-serif text-sm leading-relaxed italic"
             style={{ color: "var(--foreground)" }}
           >
-            The Way of The Fight
+            What You Should Know About Politics But Don&rsquo;t
           </p>
           <p className="font-mono text-xs mt-1" style={{ color: "var(--muted)" }}>
-            — Georges St. Pierre
+            — Jessamyn Conrad
           </p>
         </motion.div>
 
@@ -170,7 +174,7 @@ export default function NowSection() {
             Catch Me At
           </h3>
           <div className="space-y-2">
-            {events.map(({ date, label }) => (
+            {events.map(({ date, label, href }) => (
               <div
                 key={label}
                 className="flex items-center gap-4 border-b py-2.5"
@@ -182,12 +186,30 @@ export default function NowSection() {
                 >
                   {date}
                 </span>
-                <span
-                  className="font-serif text-sm"
-                  style={{ color: "var(--foreground)" }}
-                >
-                  {label}
-                </span>
+                {href ? (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-serif text-sm transition-colors"
+                    style={{ color: "var(--foreground)" }}
+                    onMouseEnter={(e) =>
+                      ((e.currentTarget as HTMLAnchorElement).style.color = "var(--accent)")
+                    }
+                    onMouseLeave={(e) =>
+                      ((e.currentTarget as HTMLAnchorElement).style.color = "var(--foreground)")
+                    }
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <span
+                    className="font-serif text-sm"
+                    style={{ color: "var(--foreground)" }}
+                  >
+                    {label}
+                  </span>
+                )}
               </div>
             ))}
           </div>
