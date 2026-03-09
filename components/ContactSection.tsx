@@ -24,9 +24,9 @@ const contactLinks = [
 ];
 
 const openTo = [
-  "Consulting / fractional work with early-stage startups",
-  "Full-time roles in preventative health tech",
-  "Volunteer work in housing, education, and youth sports",
+  "Full-time roles in preventative health, through industry or academia",
+  "Consulting / fractional roles in early-stage health tech startups",
+  "Volunteer work in policy (healthcare, housing, or education) or coaching (college/HS)",
   "Conversations with anyone and everyone",
 ];
 

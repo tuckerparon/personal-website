@@ -11,7 +11,6 @@ const tabs = [
       "Helping early- and growth-stage health tech companies build solutions for preventative care and restoration of function.",
     subtext: [
       "I've worked across consumer neurotech, metabolic wellness, and medical diagnostics — bringing rigor from the elite sports world into healthcare. My work spans everything from harmonizing 300M+ healthcare records to building brain-computer interface demos for investors.",
-      "I spend the rest of my time playing sports, biking, reading, and exploring new places.",
     ],
   },
   {
@@ -20,7 +19,6 @@ const tabs = [
     headline: "Using data to help teams win.",
     subtext: [
       "I've worked as a data analyst and performance analyst at the NCAA D1, NBA, and USL Championship levels — building forecasting models, opposition reports, and statistical tools used directly by coaching and front office staff.",
-      "I'm a former D1 student-athlete and lifelong competitor. I bring both the technical and the player's perspective.",
     ],
   },
   {
@@ -29,8 +27,7 @@ const tabs = [
     headline:
       "Mentoring young men through sport, hard goals, and the pursuit of excellence.",
     subtext: [
-      "Through The Walk-On Way and the Cambridge Spot Lab, I work with young athletes and curious people on building confidence, resilience, and a bias toward action — on the field and off it.",
-      "I believe in hard quests, controllable effort, and learning by doing.",
+      "Through The Walk-On Way and the Cambridge FOT Lab, I work with young athletes and curious people on building confidence, resilience, and compassion.",
     ],
   },
 ];
@@ -52,12 +49,25 @@ const links = [
   { label: "Email", href: "mailto:tuckerparon@gmail.com" },
 ];
 
+const lineGlow: Record<string, string> = {
+  "health-tech": "rgba(46, 160, 100, 0.6)",
+  "sports-analytics": "rgba(60, 110, 210, 0.6)",
+  coaching: "rgba(220, 110, 40, 0.6)",
+};
+
+// Approximate horizontal center of each tab within the nav bar
+const lineCenter: Record<string, string> = {
+  "health-tech": "12%",
+  "sports-analytics": "50%",
+  coaching: "88%",
+};
+
 export default function TabbedHero() {
   const [activeId, setActiveId] = useState("health-tech");
   const activeTab = tabs.find((t) => t.id === activeId)!;
 
   return (
-    <section id="about" className="min-h-screen flex items-center py-32 lg:py-0">
+    <section id="about" className="min-h-screen flex items-start py-32 lg:pt-48">
       <div className="max-w-2xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -74,25 +84,42 @@ export default function TabbedHero() {
             </span>
           </div>
 
-          {/* Tab nav */}
-          <div className="flex gap-6 mb-8 overflow-x-auto pb-1">
-            {tabs.map((tab) => {
-              const isActive = tab.id === activeId;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveId(tab.id)}
-                  className="font-mono text-xs tracking-[0.1em] uppercase whitespace-nowrap pb-1.5 border-b-2 transition-all duration-200"
-                  style={{
-                    borderColor: isActive ? "var(--accent)" : "transparent",
-                    color: isActive ? "var(--accent)" : "var(--muted)",
-                    fontWeight: isActive ? 600 : 400,
-                  }}
-                >
-                  {tab.label}
-                </button>
-              );
-            })}
+          {/* Tab nav + glow line, width capped to tab content */}
+          <div className="w-fit mb-8">
+            <div className="flex gap-6">
+              {tabs.map((tab) => {
+                const isActive = tab.id === activeId;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveId(tab.id)}
+                    className="font-mono text-xs tracking-[0.1em] uppercase whitespace-nowrap pb-1.5 border-b-2 transition-all duration-200"
+                    style={{
+                      borderColor: isActive ? lineGlow[activeId] : "transparent",
+                      color: isActive ? lineGlow[activeId] : "var(--muted)",
+                      fontWeight: isActive ? 600 : 400,
+                    }}
+                  >
+                    {tab.label}
+                  </button>
+                );
+              })}
+            </div>
+
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeId + "-line"}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                style={{
+                  height: "1px",
+                  background: `radial-gradient(ellipse 50% 100% at ${lineCenter[activeId]} 50%, ${lineGlow[activeId]} 0%, transparent 100%)`,
+                  boxShadow: `0 0 10px 3px ${lineGlow[activeId].replace("0.6", "0.18")}`,
+                }}
+              />
+            </AnimatePresence>
           </div>
 
           {/* Animated content */}
@@ -103,6 +130,8 @@ export default function TabbedHero() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
+              className="relative"
+              style={{ minHeight: "10rem" }}
             >
               <h2
                 className="font-serif text-4xl lg:text-5xl font-medium leading-[1.2] mb-8"
@@ -122,6 +151,15 @@ export default function TabbedHero() {
               ))}
             </motion.div>
           </AnimatePresence>
+
+          {/* Shared closing line */}
+          <p
+            className="font-serif text-base leading-relaxed mb-4"
+            style={{ color: "var(--muted)" }}
+          >
+            I spend the rest of my time playing sports, biking, reading, and
+            exploring new places.
+          </p>
 
           {/* Links */}
           <div className="flex flex-wrap gap-3 mt-6">
