@@ -26,7 +26,7 @@ const entries: Entry[] = [
     logo: "/assets/nuonc.jpg",
     logoBg: "#ffffff",
     role: "Technical Lead",
-    dateRange: "Jan 2026 – Present",
+    dateRange: "Jan 2026 – Mar 2026",
     type: "Contract",
     viaLabel: "via Drever Data",
     description:
@@ -42,7 +42,7 @@ const entries: Entry[] = [
     logo: "/assets/neurable.png",
     logoBg: "#ffffff",
     role: "Machine Learning Engineer",
-    dateRange: "Aug 2025 – Present",
+    dateRange: "Aug 2025 – Feb 2026",
     type: "Contract",
     viaLabel: "via Drever Data",
     description:

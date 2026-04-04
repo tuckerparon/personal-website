@@ -8,9 +8,9 @@ const tabs = [
     id: "health-tech",
     label: "Health Tech",
     headline:
-      "Helping early- and growth-stage health tech companies build solutions for preventative care and restoration of function.",
+      "Helping build healthcare tools for preventative care and restoration of function.",
     subtext: [
-      "I've worked across consumer neurotech, metabolic wellness, and medical diagnostics — bringing rigor from the elite sports world into healthcare. My work spans everything from harmonizing 300M+ healthcare records to building brain-computer interface demos for investors.",
+      "I've worked across consumer neurotech, metabolic wellness, and medical diagnostics — bringing rigor from the elite sports world into healthcare. My work spans harmonizing 300M+ healthcare records, developing brain-computer interface demos for investors, and building metabolic health tracking tools.",
     ],
   },
   {
@@ -24,10 +24,9 @@ const tabs = [
   {
     id: "coaching",
     label: "Coaching",
-    headline:
-      "Mentoring young men through sport, hard goals, and the pursuit of excellence.",
+    headline: "Youth coaching and mentorship through sport and hard goals.",
     subtext: [
-      "Through The Walk-On Way and the Cambridge FOT Lab, I work with young athletes and curious people on building confidence, resilience, and compassion.",
+      "I work with young athletes on building confidence, resilience, and the habits that carry beyond the game. This is a part of my project, the Walk-On Way — a podcast focused on highlighting the controllables and instilling agency in young people.",
     ],
   },
 ];
@@ -50,9 +49,9 @@ const links = [
 ];
 
 const lineGlow: Record<string, string> = {
-  "health-tech": "rgba(46, 160, 100, 0.6)",
-  "sports-analytics": "rgba(60, 110, 210, 0.6)",
-  coaching: "rgba(220, 110, 40, 0.6)",
+  "health-tech": "rgba(46, 160, 100, 0.28)",
+  "sports-analytics": "rgba(60, 110, 210, 0.28)",
+  coaching: "rgba(220, 110, 40, 0.28)",
 };
 
 // Approximate horizontal center of each tab within the nav bar
@@ -115,8 +114,8 @@ export default function TabbedHero() {
                 transition={{ duration: 0.4 }}
                 style={{
                   height: "1px",
-                  background: `radial-gradient(ellipse 50% 100% at ${lineCenter[activeId]} 50%, ${lineGlow[activeId]} 0%, transparent 100%)`,
-                  boxShadow: `0 0 10px 3px ${lineGlow[activeId].replace("0.6", "0.18")}`,
+                  background: `radial-gradient(ellipse 80% 100% at ${lineCenter[activeId]} 50%, ${lineGlow[activeId]} 0%, transparent 100%)`,
+                  boxShadow: `0 0 8px 2px ${lineGlow[activeId].replace("0.28", "0.10")}`,
                 }}
               />
             </AnimatePresence>
@@ -151,15 +150,6 @@ export default function TabbedHero() {
               ))}
             </motion.div>
           </AnimatePresence>
-
-          {/* Shared closing line */}
-          <p
-            className="font-serif text-base leading-relaxed mb-4"
-            style={{ color: "var(--muted)" }}
-          >
-            I spend the rest of my time playing sports, biking, reading, and
-            exploring new places.
-          </p>
 
           {/* Links */}
           <div className="flex flex-wrap gap-3 mt-6">

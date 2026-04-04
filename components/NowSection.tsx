@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const events = [
-  { date: "Mar 13–15", label: "MIT Hacking Medicine: Grand Hack", href: null },
+  { date: "Apr 10–11", label: "Harvard Health Systems Innovation Lab (HSIL) Hackathon", href: null },
   {
     date: "May 7",
     label: "Haymakers4Hope Charity Boxing Match",
@@ -57,10 +57,10 @@ export default function NowSection() {
             className="font-serif text-sm leading-relaxed italic"
             style={{ color: "var(--foreground)" }}
           >
-            What You Should Know About Politics But Don&rsquo;t
+            Massively Better Healthcare
           </p>
           <p className="font-mono text-xs mt-1" style={{ color: "var(--muted)" }}>
-            — Jessamyn Conrad
+            — Halle Tecco
           </p>
         </motion.div>
 
@@ -115,28 +115,25 @@ export default function NowSection() {
             Exploring / Side Projecting
           </h3>
           <div className="space-y-2">
-            {[
-              "BoxSmarter: Using EMG tech to manage sparring load in boxing",
-              "The Walk-On Way: Season 2",
-            ].map((item) => (
-              <div
-                key={item}
-                className="flex items-start gap-2"
-              >
-                <span
-                  className="font-mono text-xs mt-0.5 shrink-0"
-                  style={{ color: "var(--muted)" }}
-                >
-                  –
-                </span>
-                <span
-                  className="font-serif text-sm leading-relaxed"
-                  style={{ color: "var(--foreground)" }}
-                >
-                  {item}
-                </span>
-              </div>
-            ))}
+            <div className="flex items-start gap-2">
+              <span className="font-mono text-xs mt-0.5 shrink-0" style={{ color: "var(--muted)" }}>–</span>
+              <span className="font-serif text-sm leading-relaxed" style={{ color: "var(--foreground)" }}>
+                <a
+                  href="https://boxsmart.fit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "var(--accent)" }}
+                  onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")}
+                  onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")}
+                >BoxSmart</a>: Using EMG and EEG tech to manage sparring load in boxing
+              </span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="font-mono text-xs mt-0.5 shrink-0" style={{ color: "var(--muted)" }}>–</span>
+              <span className="font-serif text-sm leading-relaxed" style={{ color: "var(--foreground)" }}>
+                The Walk-On Way: Season 2
+              </span>
+            </div>
           </div>
         </motion.div>
 
