@@ -9,7 +9,7 @@ const papers = [
     venue: null,
     year: null,
     href: "https://www.boxingbrain.study/",
-    note: "Preprint submission pending — after May fight",
+    note: "preprint pending",
   },
   {
     title: "Longitudinal analysis of heart rate variability as it pertains to anxiety and readiness",
