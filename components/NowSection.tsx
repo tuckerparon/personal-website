@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 
 const events = [
-  { date: "Apr 10–11", label: "Harvard Health Systems Innovation Lab (HSIL) Hackathon", href: null },
   {
     date: "May 7",
     label: "Haymakers4Hope Charity Boxing Match",
@@ -57,10 +56,10 @@ export default function NowSection() {
             className="font-serif text-sm leading-relaxed italic"
             style={{ color: "var(--foreground)" }}
           >
-            Massively Better Healthcare
+            Raising the Floor
           </p>
           <p className="font-mono text-xs mt-1" style={{ color: "var(--muted)" }}>
-            — Halle Tecco
+            — Andy Stern
           </p>
         </motion.div>
 

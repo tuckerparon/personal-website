@@ -71,18 +71,6 @@ const projects: Project[] = [
     coverFit: "contain",
     group: "independent",
   },
-  {
-    id: "podcast",
-    name: "The Walk-On Way Podcast",
-    subheader: "Independent",
-    description:
-      "Interviewing people who took the road less traveled or took on something others said they couldn't do. Inspired by my walk-on journey.",
-    cover: "image",
-    coverSrc: "/assets/walkonway_small.png",
-    coverBg: "#2a1a0e",
-    coverFit: "cover",
-    group: "independent",
-  },
 ];
 
 // ── SVG covers ────────────────────────────────────────────────────────────
