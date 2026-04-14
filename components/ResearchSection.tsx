@@ -4,6 +4,14 @@ import { motion } from "framer-motion";
 
 const papers = [
   {
+    title: "The physiological and cognitive effects of competitive boxing",
+    authors: "T. Paron",
+    venue: null,
+    year: null,
+    href: "https://www.boxingbrain.study/",
+    note: "Preprint submission pending — after May fight",
+  },
+  {
     title: "Longitudinal analysis of heart rate variability as it pertains to anxiety and readiness",
     authors: "T. Paron",
     venue: "arXiv",
@@ -23,14 +31,6 @@ const papers = [
     venue: "OSF",
     year: null,
     href: "https://scholar.google.com/citations?user=p_dF-KQAAAAJ&hl=en",
-  },
-  {
-    title: "The physiological and cognitive effects of competitive boxing",
-    authors: "T. Paron",
-    venue: null,
-    year: null,
-    href: null,
-    comingSoon: true,
   },
 ];
 
@@ -99,9 +99,12 @@ export default function ResearchSection() {
               </p>
             </div>
             <div className="shrink-0 text-right">
-              {paper.comingSoon ? (
-                <span className="font-mono text-xs" style={{ color: "var(--muted)" }}>
-                  coming soon
+              {paper.note ? (
+                <span
+                  className="font-mono text-xs leading-relaxed block max-w-[10rem]"
+                  style={{ color: "var(--muted)" }}
+                >
+                  {paper.note}
                 </span>
               ) : (
                 <>
