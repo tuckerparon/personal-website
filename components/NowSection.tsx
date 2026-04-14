@@ -34,7 +34,7 @@ export default function NowSection() {
           What I&rsquo;m Thinking About
         </h2>
         <p className="font-mono text-xs mt-1" style={{ color: "var(--muted)" }}>
-          as of March 8, 2026
+          April 2026
         </p>
       </motion.div>
 
