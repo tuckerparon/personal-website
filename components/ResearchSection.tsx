@@ -30,7 +30,7 @@ const papers = [
     authors: "T. Paron, H. Thompson",
     venue: "OSF",
     year: null,
-    href: "https://scholar.google.com/citations?user=p_dF-KQAAAAJ&hl=en",
+    href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p_dF-KQAAAAJ&citation_for_view=p_dF-KQAAAAJ:u-x6o8ySG0sC",
   },
 ];
 
