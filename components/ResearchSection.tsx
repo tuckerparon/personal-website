@@ -7,7 +7,7 @@ const papers = [
     title: "The physiological and cognitive effects of competitive boxing",
     authors: "T. Paron",
     venue: null,
-    year: null,
+    year: "2026",
     href: "https://www.boxingbrain.study/",
     note: "preprint pending",
   },
@@ -15,7 +15,7 @@ const papers = [
     title: "Longitudinal analysis of heart rate variability as it pertains to anxiety and readiness",
     authors: "T. Paron",
     venue: "arXiv",
-    year: "2025",
+    year: "2023",
     href: "https://arxiv.org/abs/2506.19128",
   },
   {
@@ -29,7 +29,7 @@ const papers = [
     title: "Analyzing Political Polarization by Topic",
     authors: "T. Paron, H. Thompson",
     venue: "OSF",
-    year: null,
+    year: "2022",
     href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=p_dF-KQAAAAJ&citation_for_view=p_dF-KQAAAAJ:u-x6o8ySG0sC",
   },
 ];
@@ -99,32 +99,29 @@ export default function ResearchSection() {
               </p>
             </div>
             <div className="shrink-0 text-right">
-              {paper.note ? (
+              {paper.venue && (
                 <span
-                  className="font-mono text-xs leading-relaxed block max-w-[10rem]"
+                  className="font-mono text-xs block"
+                  style={{ color: "var(--accent)" }}
+                >
+                  {paper.venue}
+                </span>
+              )}
+              {paper.year && (
+                <span
+                  className="font-mono text-xs block mt-0.5"
+                  style={{ color: "var(--muted)" }}
+                >
+                  {paper.year}
+                </span>
+              )}
+              {paper.note && (
+                <span
+                  className="font-mono text-xs block mt-0.5"
                   style={{ color: "var(--muted)" }}
                 >
                   {paper.note}
                 </span>
-              ) : (
-                <>
-                  {paper.venue && (
-                    <span
-                      className="font-mono text-xs block"
-                      style={{ color: "var(--accent)" }}
-                    >
-                      {paper.venue}
-                    </span>
-                  )}
-                  {paper.year && (
-                    <span
-                      className="font-mono text-xs block mt-0.5"
-                      style={{ color: "var(--muted)" }}
-                    >
-                      {paper.year}
-                    </span>
-                  )}
-                </>
               )}
             </div>
           </motion.div>
