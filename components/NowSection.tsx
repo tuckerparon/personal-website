@@ -38,8 +38,8 @@ export default function NowSection() {
         </p>
       </motion.div>
 
-      <div className="grid lg:grid-cols-2 gap-x-16 gap-y-10 max-w-3xl">
-        {/* Reading */}
+      <div className="grid lg:grid-cols-2 gap-x-16 max-w-3xl items-start">
+        {/* Left column — Reading */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -107,97 +107,97 @@ export default function NowSection() {
           </div>
         </motion.div>
 
-        {/* Training */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <h3
-            className="font-mono text-xs tracking-[0.15em] uppercase mb-3"
-            style={{ color: "var(--accent)" }}
+        {/* Right column — Training, Writing, Exploring stacked */}
+        <div className="space-y-10">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Training
-          </h3>
-          <p
-            className="font-serif text-sm leading-relaxed"
-            style={{ color: "var(--foreground)" }}
-          >
-            Preparing for the{" "}
-            <a
-              href="https://haymakersforhope.org/events/boxing/rock-n-rumble-xv-boston-2026/fighters/tucker-paron"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors"
+            <h3
+              className="font-mono text-xs tracking-[0.15em] uppercase mb-3"
               style={{ color: "var(--accent)" }}
-              onMouseEnter={(e) =>
-                ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")
-              }
-              onMouseLeave={(e) =>
-                ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")
-              }
             >
-              Haymakers4Hope
-            </a>{" "}
-            Charity Boxing Match — May 7th at MGM Music Hall, Boston, MA.
-          </p>
-        </motion.div>
+              Training
+            </h3>
+            <p
+              className="font-serif text-sm leading-relaxed"
+              style={{ color: "var(--foreground)" }}
+            >
+              Preparing for the{" "}
+              <a
+                href="https://haymakersforhope.org/events/boxing/rock-n-rumble-xv-boston-2026/fighters/tucker-paron"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors"
+                style={{ color: "var(--accent)" }}
+                onMouseEnter={(e) =>
+                  ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")
+                }
+                onMouseLeave={(e) =>
+                  ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")
+                }
+              >
+                Haymakers4Hope
+              </a>{" "}
+              Charity Boxing Match — May 7th at MGM Music Hall, Boston, MA.
+            </p>
+          </motion.div>
 
-        {/* Writing */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-        >
-          <h3
-            className="font-mono text-xs tracking-[0.15em] uppercase mb-3"
-            style={{ color: "var(--accent)" }}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.15 }}
           >
-            Writing
-          </h3>
-          <span className="font-serif text-sm leading-relaxed italic" style={{ color: "var(--muted)" }}>
-            The State of Wearable Technology{" "}
-            <span className="not-italic font-mono text-xs">(coming soon)</span>
-          </span>
-        </motion.div>
+            <h3
+              className="font-mono text-xs tracking-[0.15em] uppercase mb-3"
+              style={{ color: "var(--accent)" }}
+            >
+              Writing
+            </h3>
+            <span className="font-serif text-sm leading-relaxed italic" style={{ color: "var(--muted)" }}>
+              The State of Wearable Technology{" "}
+              <span className="not-italic font-mono text-xs">(coming soon)</span>
+            </span>
+          </motion.div>
 
-        {/* Exploring / Side Projecting */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <h3
-            className="font-mono text-xs tracking-[0.15em] uppercase mb-3"
-            style={{ color: "var(--accent)" }}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Exploring / Side Projecting
-          </h3>
-          <div className="space-y-2">
-            <div className="flex items-start gap-2">
-              <span className="font-mono text-xs mt-0.5 shrink-0" style={{ color: "var(--muted)" }}>–</span>
-              <span className="font-serif text-sm leading-relaxed" style={{ color: "var(--foreground)" }}>
-                <a
-                  href="https://boxsmart.fit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "var(--accent)" }}
-                  onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")}
-                  onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")}
-                >BoxSmart</a>: Using EMG and EEG tech to manage sparring load in boxing
-              </span>
+            <h3
+              className="font-mono text-xs tracking-[0.15em] uppercase mb-3"
+              style={{ color: "var(--accent)" }}
+            >
+              Exploring / Side Projecting
+            </h3>
+            <div className="space-y-2">
+              <div className="flex items-start gap-2">
+                <span className="font-mono text-xs mt-0.5 shrink-0" style={{ color: "var(--muted)" }}>–</span>
+                <span className="font-serif text-sm leading-relaxed" style={{ color: "var(--foreground)" }}>
+                  <a
+                    href="https://boxsmart.fit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "var(--accent)" }}
+                    onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")}
+                    onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")}
+                  >BoxSmart</a>: Using EMG and EEG tech to manage sparring load in boxing
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="font-mono text-xs mt-0.5 shrink-0" style={{ color: "var(--muted)" }}>–</span>
+                <span className="font-serif text-sm leading-relaxed" style={{ color: "var(--foreground)" }}>
+                  The Walk-On Way: Season 2
+                </span>
+              </div>
             </div>
-            <div className="flex items-start gap-2">
-              <span className="font-mono text-xs mt-0.5 shrink-0" style={{ color: "var(--muted)" }}>–</span>
-              <span className="font-serif text-sm leading-relaxed" style={{ color: "var(--foreground)" }}>
-                The Walk-On Way: Season 2
-              </span>
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* Catch Me At — full width */}
         <motion.div
@@ -205,7 +205,7 @@ export default function NowSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="lg:col-span-2"
+          className="lg:col-span-2 mt-10"
         >
           <h3
             className="font-mono text-xs tracking-[0.15em] uppercase mb-4"
