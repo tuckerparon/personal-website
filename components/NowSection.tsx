@@ -58,9 +58,53 @@ export default function NowSection() {
           >
             Raising the Floor
           </p>
-          <p className="font-mono text-xs mt-1" style={{ color: "var(--muted)" }}>
+          <p className="font-mono text-xs mt-1 mb-4" style={{ color: "var(--muted)" }}>
             — Andy Stern
           </p>
+          <h4
+            className="font-mono text-xs tracking-[0.1em] uppercase mb-2"
+            style={{ color: "var(--muted)" }}
+          >
+            Recently Read
+          </h4>
+          <div className="space-y-2">
+            {[
+              { title: "Massively Better Healthcare", author: "Halle Tecco" },
+              { title: "The Way of the Fight", author: "Georges St-Pierre" },
+              { title: "Scorched Earth", author: "Jonathan Crary" },
+            ].map(({ title, author }) => (
+              <div key={title}>
+                <p className="font-serif text-sm italic" style={{ color: "var(--foreground)" }}>
+                  {title}
+                </p>
+                <p className="font-mono text-xs" style={{ color: "var(--muted)" }}>
+                  — {author}
+                </p>
+              </div>
+            ))}
+          </div>
+          <h4
+            className="font-mono text-xs tracking-[0.1em] uppercase mb-2 mt-4"
+            style={{ color: "var(--muted)" }}
+          >
+            Favorites
+          </h4>
+          <div className="space-y-2">
+            {[
+              { title: "The School of Life: An Emotional Education", author: "Alain de Botton" },
+              { title: "Courage Is Calling", author: "Ryan Holiday" },
+              { title: "The Moral Animal", author: "Robert Wright" },
+            ].map(({ title, author }) => (
+              <div key={title}>
+                <p className="font-serif text-sm italic" style={{ color: "var(--foreground)" }}>
+                  {title}
+                </p>
+                <p className="font-mono text-xs" style={{ color: "var(--muted)" }}>
+                  — {author}
+                </p>
+              </div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Training */}
