@@ -144,12 +144,31 @@ export default function NowSection() {
           </p>
         </motion.div>
 
-        {/* Exploring / Side Projecting */}
+        {/* Writing */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
+        >
+          <h3
+            className="font-mono text-xs tracking-[0.15em] uppercase mb-3"
+            style={{ color: "var(--accent)" }}
+          >
+            Writing
+          </h3>
+          <span className="font-serif text-sm leading-relaxed italic" style={{ color: "var(--muted)" }}>
+            The State of Wearable Technology{" "}
+            <span className="not-italic font-mono text-xs">(coming soon)</span>
+          </span>
+        </motion.div>
+
+        {/* Exploring / Side Projecting */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h3
             className="font-mono text-xs tracking-[0.15em] uppercase mb-3"
@@ -178,25 +197,6 @@ export default function NowSection() {
               </span>
             </div>
           </div>
-        </motion.div>
-
-        {/* Writing */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <h3
-            className="font-mono text-xs tracking-[0.15em] uppercase mb-3"
-            style={{ color: "var(--accent)" }}
-          >
-            Writing
-          </h3>
-          <span className="font-serif text-sm leading-relaxed italic" style={{ color: "var(--muted)" }}>
-            The State of Wearable Technology{" "}
-            <span className="not-italic font-mono text-xs">(coming soon)</span>
-          </span>
         </motion.div>
 
         {/* Catch Me At — full width */}
