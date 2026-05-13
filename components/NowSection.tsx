@@ -117,26 +117,10 @@ export default function NowSection() {
               Training
             </h3>
             <p
-              className="font-serif text-sm leading-relaxed"
-              style={{ color: "var(--foreground)" }}
+              className="font-serif text-sm leading-relaxed italic"
+              style={{ color: "var(--muted)" }}
             >
-              Preparing for the{" "}
-              <a
-                href="https://haymakersforhope.org/events/boxing/rock-n-rumble-xv-boston-2026/fighters/tucker-paron"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors"
-                style={{ color: "var(--accent)" }}
-                onMouseEnter={(e) =>
-                  ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")
-                }
-                onMouseLeave={(e) =>
-                  ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")
-                }
-              >
-                Haymakers4Hope
-              </a>{" "}
-              Charity Boxing Match — May 7th at MGM Music Hall, Boston, MA.
+              TBD
             </p>
           </motion.div>
 
