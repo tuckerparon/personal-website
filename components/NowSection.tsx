@@ -3,11 +3,6 @@
 import { motion } from "framer-motion";
 
 const events = [
-  {
-    date: "May 7",
-    label: "Haymakers4Hope Charity Boxing Match",
-    href: "https://haymakersforhope.org/events/boxing/rock-n-rumble-xv-boston-2026/fighters/tucker-paron",
-  },
   { date: "Jun 13", label: "M22 Run/Bike/Paddle Challenge", href: null },
 ];
 
@@ -56,10 +51,10 @@ export default function NowSection() {
             className="font-serif text-sm leading-relaxed italic"
             style={{ color: "var(--foreground)" }}
           >
-            Raising the Floor
+            The Road to Character
           </p>
           <p className="font-mono text-xs mt-1 mb-4" style={{ color: "var(--muted)" }}>
-            — Andy Stern
+            — David Brooks
           </p>
           <h4
             className="font-mono text-xs tracking-[0.1em] uppercase mb-2"
@@ -69,9 +64,9 @@ export default function NowSection() {
           </h4>
           <div className="space-y-2">
             {[
+              { title: "Raising the Floor", author: "Andy Stern" },
               { title: "Massively Better Healthcare", author: "Halle Tecco" },
               { title: "The Way of the Fight", author: "Georges St-Pierre" },
-              { title: "Scorched Earth", author: "Jonathan Crary" },
             ].map(({ title, author }) => (
               <div key={title}>
                 <p className="font-serif text-sm italic" style={{ color: "var(--foreground)" }}>
@@ -157,10 +152,20 @@ export default function NowSection() {
             >
               Writing
             </h3>
-            <span className="font-serif text-sm leading-relaxed italic" style={{ color: "var(--muted)" }}>
-              The State of Wearable Technology{" "}
-              <span className="not-italic font-mono text-xs">(coming soon)</span>
-            </span>
+            <div className="space-y-2">
+              <div className="flex items-start gap-2">
+                <span className="font-mono text-xs mt-0.5 shrink-0" style={{ color: "var(--muted)" }}>–</span>
+                <span className="font-serif text-sm leading-relaxed italic" style={{ color: "var(--foreground)" }}>
+                  The Psychology of Sport
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="font-mono text-xs mt-0.5 shrink-0" style={{ color: "var(--muted)" }}>–</span>
+                <span className="font-serif text-sm leading-relaxed italic" style={{ color: "var(--foreground)" }}>
+                  Misaligned Incentives in Tech
+                </span>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
@@ -176,19 +181,6 @@ export default function NowSection() {
               Exploring / Side Projecting
             </h3>
             <div className="space-y-2">
-              <div className="flex items-start gap-2">
-                <span className="font-mono text-xs mt-0.5 shrink-0" style={{ color: "var(--muted)" }}>–</span>
-                <span className="font-serif text-sm leading-relaxed" style={{ color: "var(--foreground)" }}>
-                  <a
-                    href="https://boxsmart.fit"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "var(--accent)" }}
-                    onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")}
-                    onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")}
-                  >BoxSmart</a>: Using EMG and EEG tech to manage sparring load in boxing
-                </span>
-              </div>
               <div className="flex items-start gap-2">
                 <span className="font-mono text-xs mt-0.5 shrink-0" style={{ color: "var(--muted)" }}>–</span>
                 <span className="font-serif text-sm leading-relaxed" style={{ color: "var(--foreground)" }}>
