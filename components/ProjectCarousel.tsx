@@ -21,6 +21,19 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "averin",
+    name: "Averin Health",
+    subheader: "For Harvard HSIL",
+    description:
+      "AI-powered contract analysis tool for health executives navigating value-based care negotiations. Averin extracts and compares contract details against EHR metrics — surfacing performance gaps, risk exposure, and negotiation leverage. Built on Azure with Python and InterSystems IRIS for EHR integration.",
+    url: "https://averin.health",
+    cover: "image",
+    coverSrcs: ["/assets/averin_parser.gif", "/assets/averin_scrolling_ai.gif"],
+    coverBg: "#0a0a0a",
+    coverFit: "cover",
+    group: "engagement",
+  },
+  {
     id: "nuonc",
     name: "Metabolic Tracking App",
     subheader: "For NuOnc",

@@ -20,6 +20,35 @@ interface Entry {
 
 const entries: Entry[] = [
   {
+    id: "hsil",
+    company: "Harvard HSIL",
+    url: "https://hsil.hms.harvard.edu",
+    logo: "/assets/harvard_hsil_logo.jpg",
+    logoBg: "#A51C30",
+    role: "Venture Program Fellow",
+    dateRange: "Mar 2026 – Present",
+    type: "Contract",
+    description:
+      "Building Averin Health, an AI-powered contract analysis tool that extracts and compares contract details against EHR metrics to support value-based care negotiations for health executives. Leading data science and backend infrastructure development using Azure, Microsoft Copilot, Python, and InterSystems IRIS for EHR integration.",
+    deliverable:
+      "Runner-up in the 2026 Harvard Health Systems Innovation Hackathon — top 2% of 1,000+ participants.",
+    badges: ["Azure", "Python", "EHR Integration", "AI/LLM", "Value-Based Care", "Health Policy"],
+  },
+  {
+    id: "vistim",
+    company: "Vistim Labs",
+    logo: "/assets/vistimlabs_logo.jpg",
+    logoBg: "#1a1a2e",
+    role: "Data & Partnerships Consultant",
+    dateRange: "May 2026 – Present",
+    type: "Contract",
+    description:
+      "Outreach to private neurology clinics across the US to integrate an EEG-based dementia detection and monitoring system. Fielding technical questions from clinicians regarding hardware specifications, validation against PET imaging, and FDA clearance.",
+    deliverable:
+      "Building commercial pipeline for a novel EEG-based dementia detection system across US neurology clinics.",
+    badges: ["EEG", "Neurology", "Business Development", "FDA", "Partnerships", "Dementia"],
+  },
+  {
     id: "nuonc",
     company: "NuOnc",
     url: "https://nuonc.online",
@@ -131,12 +160,18 @@ const cardVariants = {
 
 function CompanyLogo({ entry }: { entry: Entry }) {
   if (!entry.logo) {
+    const initials = entry.company
+      .split(/\s+/)
+      .map((w) => w[0])
+      .join("")
+      .slice(0, 4)
+      .toUpperCase();
     return (
       <div
         className="w-10 h-10 shrink-0 flex items-center justify-center font-mono text-xs font-bold"
-        style={{ backgroundColor: "#007A33", color: "#ffffff" }}
+        style={{ backgroundColor: entry.logoBg ?? "#333333", color: "#ffffff" }}
       >
-        UVM
+        {initials}
       </div>
     );
   }
