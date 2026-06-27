@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const events = [
-  { date: "Jun 13", label: "M22 Run/Bike/Paddle Challenge", href: null },
+  { date: "Jul 14", label: "All Tech Is Human: NYC Workshop", href: null },
 ];
 
 export default function NowSection() {
