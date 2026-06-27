@@ -36,7 +36,7 @@ const projects: Project[] = [
   {
     id: "nuonc",
     name: "Metabolic Tracking App",
-    subheader: "For NuOnc",
+    subheader: "For MyMetabolism (formerly NuOnc)",
     description:
       "The NuOnc app tracks ketone and glucose data over time for oncology patients on ketogenic therapy. This work is inspired and advised by the Glucose-Ketone Index (GKI) research of Dr. Thomas Seyfried of Boston College. Shown here is the 30-day metabolic dashboard with KetoMojo integration and the AI assistant \"Mito\" for patient guidance.",
     url: "https://nuonc.online",
@@ -384,9 +384,9 @@ export default function ConsultingSection() {
         className="font-serif text-sm leading-relaxed mb-10 max-w-xl"
         style={{ color: "var(--muted)" }}
       >
-        Drever Data is Tucker&rsquo;s independent consulting practice.
-        Engagements focus on early-stage health tech companies that need
-        hands-on data science, ML engineering, and regulated systems expertise.
+        Data services for mission-driven teams. Serving clients across health
+        technology, sports, and public policy. Open to working with any teams
+        focused on the betterment of their community and the public good.
       </motion.p>
 
       {/* ── Carousel ── */}

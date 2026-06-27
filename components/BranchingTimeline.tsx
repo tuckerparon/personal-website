@@ -26,7 +26,7 @@ const entries: Entry[] = [
     logo: "/assets/harvard_hsil_logo.jpg",
     logoBg: "#A51C30",
     role: "Venture Program Fellow",
-    dateRange: "Mar 2026 – Present",
+    dateRange: "Mar 2026 – Jun 2026",
     type: "Contract",
     description:
       "Building Averin Health, an AI-powered contract analysis tool that extracts and compares contract details against EHR metrics to support value-based care negotiations for health executives. Leading data science and backend infrastructure development using Azure, Microsoft Copilot, Python, and InterSystems IRIS for EHR integration.",
@@ -44,16 +44,15 @@ const entries: Entry[] = [
     type: "Contract",
     description:
       "Outreach to private neurology clinics across the US to integrate an EEG-based dementia detection and monitoring system. Fielding technical questions from clinicians regarding hardware specifications, validation against PET imaging, and FDA clearance.",
-    deliverable:
-      "Building commercial pipeline for a novel EEG-based dementia detection system across US neurology clinics.",
+    deliverable: "TBD",
     badges: ["EEG", "Neurology", "Business Development", "FDA", "Partnerships", "Dementia"],
   },
   {
     id: "nuonc",
-    company: "NuOnc",
+    company: "MyMetabolism (formerly NuOnc)",
     url: "https://nuonc.online",
-    logo: "/assets/nuonc.jpg",
-    logoBg: "#ffffff",
+    logo: "/assets/mymetabolism.jpg",
+    logoBg: "#1a3a2a",
     role: "Technical Lead",
     dateRange: "Jan 2026 – Mar 2026",
     type: "Contract",
