@@ -20,6 +20,19 @@ interface Entry {
 
 const entries: Entry[] = [
   {
+    id: "vistim",
+    company: "Vistim Labs",
+    logo: "/assets/vistimlabs_logo.jpg",
+    logoBg: "#1a1a2e",
+    role: "Data & Partnerships Consultant",
+    dateRange: "May 2026 – Present",
+    type: "Contract",
+    description:
+      "Outreach to private neurology clinics across the US to integrate an EEG-based dementia detection and monitoring system. Fielding technical questions from clinicians regarding hardware specifications, validation against PET imaging, and FDA clearance.",
+    deliverable: "TBD",
+    badges: ["EEG", "Neurology", "Business Development", "FDA", "Partnerships", "Dementia"],
+  },
+  {
     id: "hsil",
     company: "Harvard HSIL",
     url: "https://hsil.hms.harvard.edu",
@@ -33,19 +46,6 @@ const entries: Entry[] = [
     deliverable:
       "Runner-up in the 2026 Harvard Health Systems Innovation Hackathon — top 2% of 1,000+ participants.",
     badges: ["Azure", "Python", "EHR Integration", "AI/LLM", "Value-Based Care", "Health Policy"],
-  },
-  {
-    id: "vistim",
-    company: "Vistim Labs",
-    logo: "/assets/vistimlabs_logo.jpg",
-    logoBg: "#1a1a2e",
-    role: "Data & Partnerships Consultant",
-    dateRange: "May 2026 – Present",
-    type: "Contract",
-    description:
-      "Outreach to private neurology clinics across the US to integrate an EEG-based dementia detection and monitoring system. Fielding technical questions from clinicians regarding hardware specifications, validation against PET imaging, and FDA clearance.",
-    deliverable: "TBD",
-    badges: ["EEG", "Neurology", "Business Development", "FDA", "Partnerships", "Dementia"],
   },
   {
     id: "nuonc",
