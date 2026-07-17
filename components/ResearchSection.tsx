@@ -4,6 +4,13 @@ import { motion } from "framer-motion";
 
 const papers = [
   {
+    title: "Closing the HIPAA Gap: Federal Protections for Consumer Health Data",
+    authors: "T. Paron",
+    venue: "SSRN",
+    year: "2026",
+    href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6901722",
+  },
+  {
     title: "The physiological and cognitive effects of competitive boxing",
     authors: "T. Paron",
     venue: null,
