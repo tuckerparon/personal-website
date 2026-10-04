@@ -31,7 +31,7 @@ const entries: Entry[] = [
     description:
       "Building the Brain Data Science Platform within Stanford's Department of Neurology, harmonizing large-scale EHR, EEG, and PSG data to make it broadly accessible for research.",
     deliverable: "In progress.",
-    deliverableColor: "#F97316",
+    deliverableColor: "#CA8A04",
     badges: ["EHR", "EEG", "PSG", "Data Engineering", "IRB", "Research"],
   },
   {
@@ -321,13 +321,13 @@ function EntryRow({ entry }: { entry: Entry }) {
           className="pl-3 mb-4"
           style={{ borderLeft: `2px solid ${entry.deliverableColor ?? "var(--accent)"}` }}
         >
-          <p className="font-mono text-xs mb-1" style={{ color: "var(--accent)" }}>
+          <p
+            className="font-mono text-xs mb-1"
+            style={{ color: entry.deliverableColor ?? "var(--accent)" }}
+          >
             → outcome
           </p>
-          <p
-            className="font-serif text-xs leading-relaxed"
-            style={{ color: entry.deliverableColor ?? "var(--foreground)" }}
-          >
+          <p className="font-serif text-xs leading-relaxed" style={{ color: "var(--foreground)" }}>
             {entry.deliverable}
           </p>
         </div>
