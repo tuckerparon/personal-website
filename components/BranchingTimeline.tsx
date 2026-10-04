@@ -16,6 +16,7 @@ interface Entry {
   type?: string;
   viaLabel?: string;
   badges?: string[];
+  deliverableColor?: string;
 }
 
 const entries: Entry[] = [
@@ -29,8 +30,8 @@ const entries: Entry[] = [
     type: "Full-Time",
     description:
       "Building the Brain Data Science Platform within Stanford's Department of Neurology, harmonizing large-scale EHR, EEG, and PSG data to make it broadly accessible for research.",
-    deliverable:
-      "In progress — building infrastructure to harmonize and surface large volumes of EHR, EEG, and PSG data for neurology research.",
+    deliverable: "In progress.",
+    deliverableColor: "#F97316",
     badges: ["EHR", "EEG", "PSG", "Data Engineering", "IRB", "Research"],
   },
   {
@@ -38,7 +39,7 @@ const entries: Entry[] = [
     company: "Synseer",
     logo: "/assets/synseer_logo.jpg",
     logoBg: "#111827",
-    role: "Interim Manager, Health Data Science & Research Programs",
+    role: "Interim Manager, Health Data Science",
     dateRange: "Jul 2026 – Sep 2026",
     type: "Contract",
     description:
@@ -73,7 +74,8 @@ const entries: Entry[] = [
     viaLabel: "via Drever Data",
     description:
       "Outreach to private neurology clinics across the US to integrate an EEG-based dementia detection and monitoring system. Fielding technical questions from clinicians regarding hardware specifications, validation against PET imaging, and FDA clearance.",
-    deliverable: "TBD",
+    deliverable: "No sales converted.",
+    deliverableColor: "#DC2626",
     badges: ["EEG", "Neurology", "Business Development", "FDA", "Partnerships", "Dementia"],
   },
   {
@@ -317,12 +319,15 @@ function EntryRow({ entry }: { entry: Entry }) {
         {/* Deliverable block */}
         <div
           className="pl-3 mb-4"
-          style={{ borderLeft: "2px solid var(--accent)" }}
+          style={{ borderLeft: `2px solid ${entry.deliverableColor ?? "var(--accent)"}` }}
         >
           <p className="font-mono text-xs mb-1" style={{ color: "var(--accent)" }}>
             → outcome
           </p>
-          <p className="font-serif text-xs leading-relaxed" style={{ color: "var(--foreground)" }}>
+          <p
+            className="font-serif text-xs leading-relaxed"
+            style={{ color: entry.deliverableColor ?? "var(--foreground)" }}
+          >
             {entry.deliverable}
           </p>
         </div>
