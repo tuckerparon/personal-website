@@ -24,7 +24,6 @@ const contactLinks = [
 ];
 
 const openTo = [
-  "Full-time roles in preventative health, through industry or academia",
   "Consulting / fractional roles in early-stage health tech startups",
   "Volunteer work in policy (healthcare, housing, or education) or coaching (college/HS)",
   "Conversations with anyone and everyone",

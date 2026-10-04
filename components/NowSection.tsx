@@ -2,9 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const events = [
-  { date: "Jul 14", label: "All Tech Is Human: NYC Workshop", href: null },
-];
+const events: { date: string; label: string; href: string | null }[] = [];
 
 export default function NowSection() {
   return (
@@ -189,46 +187,55 @@ export default function NowSection() {
           >
             Catch Me At
           </h3>
-          <div className="space-y-2">
-            {events.map(({ date, label, href }) => (
-              <div
-                key={label}
-                className="flex items-center gap-4 border-b py-2.5"
-                style={{ borderColor: "var(--border)" }}
-              >
-                <span
-                  className="font-mono text-xs w-20 shrink-0 tabular-nums"
-                  style={{ color: "var(--accent)" }}
+          {events.length === 0 ? (
+            <p
+              className="font-serif text-sm italic"
+              style={{ color: "var(--muted)" }}
+            >
+              No upcoming events.
+            </p>
+          ) : (
+            <div className="space-y-2">
+              {events.map(({ date, label, href }) => (
+                <div
+                  key={label}
+                  className="flex items-center gap-4 border-b py-2.5"
+                  style={{ borderColor: "var(--border)" }}
                 >
-                  {date}
-                </span>
-                {href ? (
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-serif text-sm transition-colors"
-                    style={{ color: "var(--foreground)" }}
-                    onMouseEnter={(e) =>
-                      ((e.currentTarget as HTMLAnchorElement).style.color = "var(--accent)")
-                    }
-                    onMouseLeave={(e) =>
-                      ((e.currentTarget as HTMLAnchorElement).style.color = "var(--foreground)")
-                    }
-                  >
-                    {label}
-                  </a>
-                ) : (
                   <span
-                    className="font-serif text-sm"
-                    style={{ color: "var(--foreground)" }}
+                    className="font-mono text-xs w-20 shrink-0 tabular-nums"
+                    style={{ color: "var(--accent)" }}
                   >
-                    {label}
+                    {date}
                   </span>
-                )}
-              </div>
-            ))}
-          </div>
+                  {href ? (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-serif text-sm transition-colors"
+                      style={{ color: "var(--foreground)" }}
+                      onMouseEnter={(e) =>
+                        ((e.currentTarget as HTMLAnchorElement).style.color = "var(--accent)")
+                      }
+                      onMouseLeave={(e) =>
+                        ((e.currentTarget as HTMLAnchorElement).style.color = "var(--foreground)")
+                      }
+                    >
+                      {label}
+                    </a>
+                  ) : (
+                    <span
+                      className="font-serif text-sm"
+                      style={{ color: "var(--foreground)" }}
+                    >
+                      {label}
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
         </motion.div>
       </div>
     </section>

@@ -20,6 +20,34 @@ interface Entry {
 
 const entries: Entry[] = [
   {
+    id: "stanford",
+    company: "Stanford University",
+    logo: "/assets/stanford_logo.jpg",
+    logoBg: "#8C1515",
+    role: "Research Engineer",
+    dateRange: "Sep 2026 – Present",
+    type: "Full-Time",
+    description:
+      "Building the Brain Data Science Platform within Stanford's Department of Neurology, harmonizing large-scale EHR, EEG, and PSG data to make it broadly accessible for research.",
+    deliverable:
+      "In progress — building infrastructure to harmonize and surface large volumes of EHR, EEG, and PSG data for neurology research.",
+    badges: ["EHR", "EEG", "PSG", "Data Engineering", "IRB", "Research"],
+  },
+  {
+    id: "synseer",
+    company: "Synseer",
+    logo: "/assets/synseer_logo.jpg",
+    logoBg: "#111827",
+    role: "Interim Manager, Health Data Science & Research Programs",
+    dateRange: "Jul 2026 – Sep 2026",
+    type: "Contract",
+    description:
+      "Engaged to scope health data science and research programs for a seed-stage hearing and heart health wearable monitoring device, covering wearable technology research and development and data harmonization planning.",
+    deliverable:
+      "Scoped early-stage data science and research program plans before transitioning to a role at Stanford.",
+    badges: ["Wearable Technology", "Research and Development (R&D)", "Data Harmonization"],
+  },
+  {
     id: "hsil",
     company: "Harvard HSIL",
     url: "https://hsil.hms.harvard.edu",
@@ -42,6 +70,7 @@ const entries: Entry[] = [
     role: "Data & Partnerships Consultant",
     dateRange: "May 2026 – Jun 2026",
     type: "Contract",
+    viaLabel: "via Drever Data",
     description:
       "Outreach to private neurology clinics across the US to integrate an EEG-based dementia detection and monitoring system. Fielding technical questions from clinicians regarding hardware specifications, validation against PET imaging, and FDA clearance.",
     deliverable: "TBD",
