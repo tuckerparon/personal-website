@@ -136,7 +136,7 @@ export default function ContactSection() {
             className="font-mono text-xs mt-8 leading-relaxed"
             style={{ color: "var(--muted)" }}
           >
-            Based in Cambridge, MA. Roots in VT and CT. Open to relocation,
+            Based in Palo Alto, CA. Roots in VT and CT. Open to relocation,
             travel, and remote engagements.
           </p>
         </motion.div>

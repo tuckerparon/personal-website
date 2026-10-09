@@ -45,15 +45,24 @@ export default function NowSection() {
           >
             Reading
           </h3>
-          <p
-            className="font-serif text-sm leading-relaxed italic"
-            style={{ color: "var(--foreground)" }}
-          >
-            The Road to Character
-          </p>
-          <p className="font-mono text-xs mt-1 mb-4" style={{ color: "var(--muted)" }}>
-            — David Brooks
-          </p>
+          <div className="space-y-2 mb-4">
+            {[
+              { title: "Atlas of Sleep Medicine", author: "Chokroverty, Thomas & Bhatt" },
+              { title: "Tuesdays with Morrie", author: "Mitch Albom" },
+            ].map(({ title, author }) => (
+              <div key={title}>
+                <p
+                  className="font-serif text-sm leading-relaxed italic"
+                  style={{ color: "var(--foreground)" }}
+                >
+                  {title}
+                </p>
+                <p className="font-mono text-xs mt-1" style={{ color: "var(--muted)" }}>
+                  — {author}
+                </p>
+              </div>
+            ))}
+          </div>
           <h4
             className="font-mono text-xs tracking-[0.1em] uppercase mb-2"
             style={{ color: "var(--muted)" }}

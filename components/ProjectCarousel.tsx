@@ -59,19 +59,6 @@ const projects: Project[] = [
     group: "engagement",
   },
   {
-    id: "harmona",
-    name: "HarmonaHealth",
-    subheader: "For MIT Solve",
-    description:
-      "HarmonaHealth is a population-based anticipatory health platform prototyped for the MIT Solve competition. The system models health risk across communities to surface intervention opportunities before disease outbreaks and onset.",
-    url: "https://harmonahealth.com",
-    cover: "image",
-    coverSrcs: ["/assets/harmona_demo_1.png", "/assets/harmona_demo_2.png", "/assets/harmona_demo_3.png"],
-    coverBg: "#ffffff",
-    coverFit: "cover",
-    group: "engagement",
-  },
-  {
     id: "bestxi",
     name: "Best.XI",
     subheader: "Independent",
