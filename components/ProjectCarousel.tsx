@@ -25,7 +25,7 @@ const projects: Project[] = [
     name: "Averin Health",
     subheader: "For Harvard HSIL",
     description:
-      "AI-powered contract analysis tool for health executives navigating value-based care negotiations. Averin extracts and compares contract details against EHR metrics — surfacing performance gaps, risk exposure, and negotiation leverage. Built on Azure with Python and InterSystems IRIS for EHR integration.",
+      "AI-powered contract analysis tool for health executives navigating value-based care negotiations. Averin extracts and compares contract details against EHR metrics to help surface performance gaps, risk exposure, and negotiation leverage. Built on Azure with Python and InterSystems IRIS for EHR integration.",
     url: "https://averin.health",
     cover: "image",
     coverSrcs: ["/assets/averin_parser.gif", "/assets/averin_scrolling_ai.gif"],
@@ -51,7 +51,7 @@ const projects: Project[] = [
     name: "Brain Age and Large Brain Model Demos",
     subheader: "For Neurable",
     description:
-      "The Neurable Brain Health and Large Brain Model desktop applications — two of a suite of Python apps built to demonstrate non-invasive BCI utility to investors and partners. The former uses two minutes of EOEC EEG data to predict brain age; the latter tokenizes live EEG using an autoencoder and transformer architecture.",
+      "The Neurable Brain Health and Large Brain Model desktop applications are two of a suite of Python apps built to demonstrate non-invasive BCI utility to investors and partners. The former uses two minutes of EOEC EEG data to predict brain age; the latter tokenizes live EEG using an autoencoder and transformer architecture.",
     cover: "image",
     coverSrcs: ["/assets/neurable_demo_3.png", "/assets/neurable_demo_2.png"],
     coverBg: "#000000",
