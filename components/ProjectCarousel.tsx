@@ -71,6 +71,19 @@ const projects: Project[] = [
     coverFit: "contain",
     group: "independent",
   },
+  {
+    id: "phrp",
+    name: "PHRP",
+    subheader: "Independent",
+    description:
+      "Personal Health Research Platform.",
+    url: "https://phrp.study",
+    cover: "image",
+    coverSrc: "/assets/phrp.gif",
+    coverBg: "#000000",
+    coverFit: "cover",
+    group: "independent",
+  },
 ];
 
 // ── SVG covers ────────────────────────────────────────────────────────────

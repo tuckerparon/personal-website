@@ -42,6 +42,7 @@ const entries: Entry[] = [
     role: "Interim Manager, Health Data Science",
     dateRange: "Jul 2026 – Sep 2026",
     type: "Contract",
+    viaLabel: "via Drever Data",
     description:
       "Engaged to scope health data science and research programs for a seed-stage hearing and heart health wearable monitoring device, covering wearable technology research and development and data harmonization planning.",
     deliverable:
