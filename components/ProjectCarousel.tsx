@@ -76,7 +76,7 @@ const projects: Project[] = [
     name: "PHRP",
     subheader: "Independent",
     description:
-      "A HIPAA-aligned personal health research platform that harmonizes wearable (WHOOP, Fitbit, Apple Health), environmental, and behavioral data to a daily grain per participant and derives a Neuromotor Readiness Index with a pre-registered validation methodology. Participants query their own data in natural language — the LLM only picks metrics and date ranges from a fixed catalog, never SQL — while a pseudonymized Population view gives researchers a cross-participant read.",
+      "A Personal Health Research Platform that harmonizes wearable, environmental, and behavioral data to allow users to query their own data in natural language.",
     url: "https://phrp.study",
     cover: "image",
     coverSrc: "/assets/phrp.gif",
